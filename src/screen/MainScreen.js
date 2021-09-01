@@ -9,6 +9,7 @@ import { Colores } from '../styles/Colores';
 import { styles } from '../styles/GlobalStyles';
 import {ver,calcular,value} from '../store/actions';
 const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
 export const MainScreen = () => {
 
     const {mas,valor,calculo} =useSelector(state=>state.mainReducer);
@@ -38,7 +39,7 @@ export const MainScreen = () => {
                 <Text style={[styles.text, styles.text1]} >Conviertete en miembro, recibe beneficios{"\n"}exclusivos y dale lo mejor a tu mascota</Text>
             </View>
             <View style={{ alignItems: 'center', marginTop: 40 }}>
-                <Image source={require("../assets/card_member.png")} style={{ width: '75%', height: windowHeight / 4, borderRadius: 15, borderWidth: 0.2, borderColor: 'black' }} />
+                <Image source={require("../assets/card_member.png")} style={{ width: windowWidth/1.3, height: windowHeight / 3.8, borderRadius: 15, borderWidth: 0.2, borderColor: 'black' }} />
             </View>
             <View style={{ backgroundColor: Colores.gray800, marginTop: 45, marginHorizontal: '7%', borderRadius: 15, borderColor: Colores.sunshineGold, borderWidth: 0.5 }} >
                 <View style={{ marginHorizontal: '5%' }} >
@@ -81,7 +82,7 @@ export const MainScreen = () => {
                 <TextInput
                     keyboardType="numeric"
                     placeholder="Valor en pesos"
-                    style={{ marginTop: 20, backgroundColor: Colores.gray700, width: "100%", fontSize: 25, padding: 7.5, borderRadius: 10, textAlign: 'center' }}
+                    style={{ marginTop: 20,color:'white', backgroundColor: Colores.gray700, width: "100%", fontSize: 25, padding: 7.5, borderRadius: 10, textAlign: 'center' }}
                     placeholderTextColor="white"
                     onChangeText={(v)=>dispatch(value(v))}
                 />
