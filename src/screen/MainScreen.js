@@ -38,7 +38,7 @@ export const MainScreen = () => {
                 <Text style={[styles.text, styles.text1]} >Conviertete en miembro, recibe beneficios{"\n"}exclusivos y dale lo mejor a tu mascota</Text>
             </View>
             <View style={{ alignItems: 'center', marginTop: 40 }}>
-                <Image source={require("../assets/card_member.png")} style={{ width: '80%', height: windowHeight / 3.5, borderRadius: 15, borderWidth: 0.2, borderColor: 'black' }} />
+                <Image source={require("../assets/card_member.png")} style={{ width: '75%', height: windowHeight / 4, borderRadius: 15, borderWidth: 0.2, borderColor: 'black' }} />
             </View>
             <View style={{ backgroundColor: Colores.gray800, marginTop: 45, marginHorizontal: '7%', borderRadius: 15, borderColor: Colores.sunshineGold, borderWidth: 0.5 }} >
                 <View style={{ marginHorizontal: '5%' }} >
